@@ -92,7 +92,7 @@ function Quiz() {
                 {selectedOptions[index] === q.answer
                   ? "Correct! 😊"
                   : `Incorrect. The correct answer is: ${
-                      q.options.find((opt) => opt.key === q.answer).option
+                      q.options.find((opt) => opt.key === q.answer)?.option || "Unknown"
                     } 😔`}
               </div>
             )}
