@@ -23,7 +23,7 @@ app.add_middleware(
 # Load API key from environment variable
 API_KEY = os.getenv("COHERE_API_KEY")
 if not API_KEY:
-    raise EnvironmentError("COHERE_KEY environment variable not set")
+    raise EnvironmentError("COHERE_API_KEY environment variable not set")
 
 # Initialize the Cohere client with your API key
 co = cohere.Client(os.getenv("COHERE_API_KEY"))
